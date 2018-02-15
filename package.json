@@ -15,7 +15,7 @@
     "storybook:build": "rimraf out/storybook && build-storybook -c storybook -o out/storybook",
     "docs": "gitbook serve docs out/docs",
     "docs:build": "rimraf out/docs && gitbook build docs out/docs",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "dependencies": {
     "@activewidgets/frameworks": "https://cdn.activewidgets.com/packages/frameworks-0.0.1.tgz",
@@ -23,12 +23,24 @@
   },
   "devDependencies": {
     "@storybook/vue": "^3.3.13",
+    "@vue/test-utils": "^1.0.0-beta.11",
     "babel-core": "^6.26.0",
+    "babel-jest": "^22.2.2",
+    "babel-preset-env": "^1.6.1",
     "gitbook-cli": "^2.3.2",
+    "jest": "^22.2.2",
     "rimraf": "^2.6.2",
     "vue": "^2.5.13",
     "vue-loader": "^14.1.1",
     "vue-template-compiler": "^2.5.13"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  },
+  "jest": {
+    "rootDir": "test/unit"
   },
   "repository": {
     "type": "git",
