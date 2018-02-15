@@ -1,0 +1,23 @@
+{
+  "name": "@activewidgets/vue",
+  "version": "0.0.1",
+  "description": "Datagrid component for vue.js",
+  "author": "webmaster@activewidgets.com",
+  "license": "MIT",
+  "main": "index.js",
+  "files": [
+    "*.js",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@activewidgets/frameworks": "https://cdn.activewidgets.com/packages/frameworks-0.0.1.tgz",
+    "@activewidgets/grid": "https://cdn.activewidgets.com/packages/grid-0.0.1.tgz"
+  },
+  "devDependencies": {
+    "vue": "^2.5.13"
+  }
+}
