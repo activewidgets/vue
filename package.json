@@ -13,6 +13,8 @@
   "scripts": {
     "storybook": "start-storybook -p 9001 -c storybook",
     "storybook:build": "rimraf out/storybook && build-storybook -c storybook -o out/storybook",
+    "docs": "gitbook serve docs out/docs",
+    "docs:build": "rimraf out/docs && gitbook build docs out/docs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
@@ -22,6 +24,7 @@
   "devDependencies": {
     "@storybook/vue": "^3.3.13",
     "babel-core": "^6.26.0",
+    "gitbook-cli": "^2.3.2",
     "rimraf": "^2.6.2",
     "vue": "^2.5.13",
     "vue-loader": "^14.1.1",
