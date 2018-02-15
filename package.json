@@ -11,6 +11,8 @@
     "README.md"
   ],
   "scripts": {
+    "storybook": "start-storybook -p 9001 -c storybook",
+    "storybook:build": "rimraf out/storybook && build-storybook -c storybook -o out/storybook",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
@@ -18,6 +20,22 @@
     "@activewidgets/grid": "https://cdn.activewidgets.com/packages/grid-0.0.1.tgz"
   },
   "devDependencies": {
-    "vue": "^2.5.13"
-  }
+    "@storybook/vue": "^3.3.13",
+    "babel-core": "^6.26.0",
+    "rimraf": "^2.6.2",
+    "vue": "^2.5.13",
+    "vue-loader": "^14.1.1",
+    "vue-template-compiler": "^2.5.13"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/activewidgets/vue.git"
+  },
+  "keywords": [
+    "vue"
+  ],
+  "bugs": {
+    "url": "https://github.com/activewidgets/vue/issues"
+  },
+  "homepage": "https://github.com/activewidgets/vue#readme"
 }
