@@ -1,10 +1,20 @@
 
 import Vue from 'vue';
-import {vue} from  '@activewidgets/frameworks';
-import * as options from '@activewidgets/grid';
+import {VueBuilder} from '@activewidgets/frameworks';
+import {grid, row} from '@activewidgets/grid';
+import '@activewidgets/grid/index.css'
 
-const component = vue(Vue),
-    Grid = component(options.grid),
-    components = {Grid};
+const build = VueBuilder.init(Vue);
 
-export {Vue, components as default, components, Grid};
+export const Grid = build(grid);
+export const Row = build(row);
+
+export const components = {Grid, Row};
+
+function install(Vue){
+    for(let i in components){
+        Vue.component('ax-' + i.toLowerCase(), components[i]);
+    }
+}
+
+export default {install, components, Grid, Row};

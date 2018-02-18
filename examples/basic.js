@@ -1,6 +1,6 @@
 
 import Vue from 'vue';
-import {Grid} from '../default';
+import {Grid} from '../';
 import rows from './data/customers.js';
 
 
