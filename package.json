@@ -4,13 +4,16 @@
   "description": "Datagrid component for vue.js",
   "author": "webmaster@activewidgets.com",
   "license": "MIT",
-  "main": "index.js",
+  "main": "./index.common.js",
+  "module": "./index.esm.js",
   "files": [
+    "dist",
     "*.js",
     "LICENSE",
     "README.md"
   ],
   "scripts": {
+    "build": "rollup -c",
     "storybook": "start-storybook -p 9001 -c storybook",
     "storybook:build": "rimraf out/storybook && build-storybook -c storybook -o out/storybook",
     "docs": "gitbook serve docs out/docs",
@@ -26,10 +29,13 @@
     "@vue/test-utils": "^1.0.0-beta.11",
     "babel-core": "^6.26.0",
     "babel-jest": "^22.2.2",
+    "babel-plugin-external-helpers": "^6.22.0",
     "babel-preset-env": "^1.6.1",
     "gitbook-cli": "^2.3.2",
     "jest": "^22.2.2",
     "rimraf": "^2.6.2",
+    "rollup": "^0.55.3",
+    "rollup-plugin-babel": "^3.0.3",
     "vue": "^2.5.13",
     "vue-loader": "^14.1.1",
     "vue-template-compiler": "^2.5.13"
