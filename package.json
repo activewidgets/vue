@@ -46,7 +46,10 @@
     ]
   },
   "jest": {
-    "rootDir": "test/unit"
+    "rootDir": "test/unit",
+    "moduleNameMapper": {
+      "\\.(css|png)$": "<rootDir>/../mocks/files.js"
+    }
   },
   "repository": {
     "type": "git",
