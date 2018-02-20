@@ -15,7 +15,7 @@
   "scripts": {
     "build": "rollup -c",
     "storybook": "start-storybook -p 9001 -c storybook",
-    "storybook:build": "rimraf out/storybook && build-storybook -c storybook -o out/storybook",
+    "storybook:build": "npm run build && rimraf out/storybook && build-storybook -c storybook -o out/storybook",
     "docs": "gitbook serve docs out/docs",
     "docs:build": "rimraf out/docs && gitbook build docs out/docs",
     "test": "jest"
