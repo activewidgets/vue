@@ -2,3 +2,4 @@ node_modules
 dist
 out
 *.bat
+package-lock.json
