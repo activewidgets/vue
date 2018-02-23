@@ -2,7 +2,8 @@
 import { configure } from '@storybook/vue';
 
 function loadStories() {
-    require('./stories.js');
+    require('./demo.js');
+    require('./e2e.js');
 }
 
 configure(loadStories, module);
