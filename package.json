@@ -1,6 +1,6 @@
 {
   "name": "@activewidgets/vue",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Datagrid component for vue.js",
   "author": "webmaster@activewidgets.com",
   "license": "MIT",
@@ -8,7 +8,7 @@
   "module": "./index.esm.js",
   "files": [
     "dist",
-    "*.js",
+    "index.*.js",
     "LICENSE",
     "README.md"
   ],
@@ -23,8 +23,8 @@
     "test": "jest"
   },
   "dependencies": {
-    "@activewidgets/frameworks": "https://cdn.activewidgets.com/packages/frameworks-0.0.2.tgz",
-    "@activewidgets/grid": "https://cdn.activewidgets.com/packages/grid-0.0.2.tgz"
+    "@activewidgets/frameworks": "https://cdn.activewidgets.com/packages/frameworks-0.0.3.tgz",
+    "@activewidgets/grid": "https://cdn.activewidgets.com/packages/grid-0.0.3.tgz"
   },
   "devDependencies": {
     "@storybook/vue": "^3.3.13",
