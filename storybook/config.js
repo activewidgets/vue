@@ -1,5 +1,6 @@
 
 import { configure } from '@storybook/vue';
+import '../css';
 
 function loadStories() {
     require('./demo.js');

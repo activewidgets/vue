@@ -4,8 +4,8 @@
   "description": "Datagrid component for vue.js",
   "author": "webmaster@activewidgets.com",
   "license": "MIT",
-  "main": "./index.common.js",
-  "module": "./index.esm.js",
+  "main": "./dist/index.umd.js",
+  "module": "./dist/index.esm.js",
   "files": [
     "dist",
     "index.*.js",

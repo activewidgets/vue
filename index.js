@@ -1,12 +1,12 @@
 
 import Vue from 'vue';
-import {VueBuilder} from '@activewidgets/frameworks';
+import AX from '@activewidgets/frameworks/vue';
 import {grid, row} from '@activewidgets/grid';
 
-const build = VueBuilder.init(Vue);
+let {component} = AX(Vue);
 
-export const Grid = build(grid);
-export const Row = build(row);
+export const Grid = component(grid);
+export const Row = component(row);
 
 export const components = {Grid, Row};
 
