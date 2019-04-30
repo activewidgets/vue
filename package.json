@@ -18,8 +18,6 @@
     "build": "rollup -c",
     "storybook": "start-storybook -p 9001 -c storybook",
     "storybook:build": "npm run build && rimraf out/storybook && build-storybook -c storybook -o out/storybook",
-    "docs": "gitbook serve docs out/docs",
-    "docs:build": "rimraf out/docs && gitbook build docs out/docs",
     "test": "jest"
   },
   "dependencies": {
@@ -34,7 +32,6 @@
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-preset-env": "^1.6.1",
     "chromedriver": "^2.38.2",
-    "gitbook-cli": "^2.3.2",
     "jest": "^22.4.3",
     "rimraf": "^2.6.2",
     "rollup": "^0.55.3",
