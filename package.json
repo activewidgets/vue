@@ -1,14 +1,16 @@
 {
   "name": "@activewidgets/vue",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Datagrid component for vue.js",
   "author": "webmaster@activewidgets.com",
   "license": "MIT",
   "main": "./dist/index.umd.js",
   "module": "./dist/index.esm.js",
+  "es2015": "./index.js",
   "files": [
+    "css",
     "dist",
-    "index.*.js",
+    "index.js",
     "LICENSE",
     "README.md"
   ],
