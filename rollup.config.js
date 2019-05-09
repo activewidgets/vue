@@ -4,14 +4,14 @@ import babel from 'rollup-plugin-babel';
 
 let globals = {
     'vue': 'Vue',
-    '@activewidgets/frameworks/vue': 'AX.frameworks.vue',
-    '@activewidgets/grid': 'AX.components'
+    '@activewidgets/frameworks/vue': 'ActiveWidgets.frameworks.vue',
+    '@activewidgets/grid': 'ActiveWidgets.components'
 };
 
 export default {
     input: 'index.js',
     output: [
-        {file: 'dist/ax-vue.js', format: 'umd', sourcemap: true, name: 'AX.Vue', extend: true, globals},
+        {file: 'dist/ax-vue.js', format: 'umd', sourcemap: true, name: 'ActiveWidgets.Vue', extend: true, globals},
         {file: 'dist/ax-vue.esm.js', format: 'esm', sourcemap: true}
     ],
     external: [
