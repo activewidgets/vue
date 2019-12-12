@@ -1,6 +1,6 @@
 {
-  "name": "@activewidgets/angular/css",
-  "main": "./index.js",
-  "module": "./esm.js",
+  "name": "@activewidgets/vue/css",
+  "main": "../dist/ax-css.umd.js",
+  "module": "../dist/ax-css.esm.js",
   "private": true
 }

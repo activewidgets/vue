@@ -1,2 +1,2 @@
 
-require('@activewidgets/grid/css/index.css');
+import '@activewidgets/grid/css';
