@@ -1,2 +1,2 @@
 
-import '@activewidgets/grid/css';
+import '@activewidgets/datagrid/css';

@@ -1,5 +1,5 @@
 
-import css from '@activewidgets/grid/style';
+import css from '@activewidgets/datagrid/style';
 import styleInject from 'style-inject';
 export * from '../js/index.js';
 

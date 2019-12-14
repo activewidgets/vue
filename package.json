@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "@activewidgets/frameworks": "https://cdn.activewidgets.com/packages/frameworks-0.0.5.tgz",
-    "@activewidgets/grid": "https://cdn.activewidgets.com/packages/grid-0.0.5.tgz"
+    "@activewidgets/datagrid": "https://cdn.activewidgets.com/packages/datagrid-0.0.5.tgz"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",

@@ -25,7 +25,7 @@ const data = {columns, rows};
 
 new Vue({
     el: '#app',
-    template: '<grid :rows="rows" :columns="columns"></grid>',
+    template: '<ax-datagrid :rows="rows" :columns="columns"></ax-datagrid>',
     components: components,
     data: data
 });
