@@ -1,6 +1,6 @@
 {
   "name": "@activewidgets/vue",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Datagrid component for vue.js",
   "author": "webmaster@activewidgets.com",
   "license": "MIT",
@@ -16,8 +16,8 @@
     "build": "rollup -c"
   },
   "dependencies": {
-    "@activewidgets/frameworks": "https://cdn.activewidgets.com/packages/frameworks-0.0.5.tgz",
-    "@activewidgets/datagrid": "https://cdn.activewidgets.com/packages/datagrid-0.0.5.tgz"
+    "@activewidgets/frameworks": "https://cdn.activewidgets.com/packages/frameworks-0.0.6.tgz",
+    "@activewidgets/datagrid": "https://cdn.activewidgets.com/packages/datagrid-0.0.6.tgz"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
