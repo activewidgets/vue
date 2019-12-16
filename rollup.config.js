@@ -13,10 +13,10 @@ let name = 'ActiveWidgets.Vue',
 
 let globals = {
     'vue': 'Vue',
-    '@activewidgets/frameworks/vue': 'ActiveWidgets.frameworks.vue',
-    '@activewidgets/datagrid/js': 'ActiveWidgets.components',
-    '@activewidgets/datagrid/style': 'ActiveWidgets.styles',
-    '@activewidgets/datagrid/metadata': 'ActiveWidgets.metadata',
+    '@activewidgets/frameworks/vue': 'ActiveWidgets.Frameworks.Vue',
+    '@activewidgets/datagrid/js': 'ActiveWidgets.Components',
+    '@activewidgets/datagrid/style': 'ActiveWidgets.Styles',
+    '@activewidgets/datagrid/metadata': 'ActiveWidgets.Metadata',
     '@activewidgets/datagrid/css': ''
 };
 
