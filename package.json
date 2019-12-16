@@ -4,10 +4,10 @@
   "description": "Datagrid component for vue.js",
   "author": "webmaster@activewidgets.com",
   "license": "MIT",
-  "main": "./dist/ax-package.umd.js",
-  "module": "./dist/ax-package.esm.js",
+  "main": "./dist/umd/package.js",
+  "module": "./dist/esm/package.js",
   "files": [
-    "dist/ax-*.*",
+    "dist/*/*.*",
     "**/package.json",
     "LICENSE",
     "README.md"

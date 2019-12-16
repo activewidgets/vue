@@ -1,6 +1,6 @@
 {
   "name": "@activewidgets/vue/css",
-  "main": "../dist/ax-css.umd.js",
-  "module": "../dist/ax-css.esm.js",
+  "main": "../dist/umd/css.js",
+  "module": "../dist/esm/css.js",
   "private": true
 }

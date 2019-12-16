@@ -1,6 +1,6 @@
 {
   "name": "@activewidgets/vue/bundle",
-  "main": "../dist/ax-bundle.umd.js",
-  "module": "../dist/ax-bundle.esm.js",
+  "main": "../dist/umd/bundle.js",
+  "module": "../dist/esm/bundle.js",
   "private": true
 }
