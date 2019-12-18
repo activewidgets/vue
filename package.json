@@ -17,7 +17,8 @@
   },
   "dependencies": {
     "@activewidgets/frameworks": "https://cdn.activewidgets.com/packages/frameworks-0.0.6.tgz",
-    "@activewidgets/datagrid": "https://cdn.activewidgets.com/packages/datagrid-0.0.6.tgz"
+    "@activewidgets/datagrid": "https://cdn.activewidgets.com/packages/datagrid-0.0.6.tgz",
+    "vue": "*"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
