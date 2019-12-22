@@ -15,14 +15,16 @@
   "scripts": {
     "build": "rollup -c",
     "public": "parcel build examples/index.html -d public --no-minify",
-    "start": "parcel examples/index.html -d public --open"
+    "start": "parcel examples/index.html -d public --open",
+    "test": "npm run public && jest"
   },
   "dependencies": {
     "@activewidgets/datagrid": "https://cdn.activewidgets.com/packages/datagrid-0.0.6.tgz",
     "@activewidgets/frameworks": "https://cdn.activewidgets.com/packages/frameworks-0.0.6.tgz",
-    "vue": "*"
+    "vue": "^2.0.0"
   },
   "devDependencies": {
+    "@activewidgets/puppeteer": "^0.0.2",
     "@babel/core": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "@rollup/plugin-node-resolve": "^6.0.0",
@@ -34,6 +36,10 @@
     "rollup-plugin-sourcemaps": "^0.4.0",
     "rollup-plugin-terser": "^5.0.0",
     "style-inject": "^0.3.0"
+  },
+  "jest": {
+    "preset": "@activewidgets/puppeteer",
+    "rootDir": "test"
   },
   "repository": {
     "type": "git",
