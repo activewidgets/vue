@@ -13,17 +13,20 @@
     "README.md"
   ],
   "scripts": {
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "public": "parcel build examples/index.html -d public --no-minify",
+    "start": "parcel examples/index.html -d public --open"
   },
   "dependencies": {
-    "@activewidgets/frameworks": "https://cdn.activewidgets.com/packages/frameworks-0.0.6.tgz",
     "@activewidgets/datagrid": "https://cdn.activewidgets.com/packages/datagrid-0.0.6.tgz",
+    "@activewidgets/frameworks": "https://cdn.activewidgets.com/packages/frameworks-0.0.6.tgz",
     "vue": "*"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "@rollup/plugin-node-resolve": "^6.0.0",
+    "parcel": "^1.0.0",
     "postcss-import": "^12.0.0",
     "rollup": "^1.20.0",
     "rollup-plugin-babel": "^4.0.0",
