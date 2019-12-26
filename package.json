@@ -16,7 +16,7 @@
     "build": "rollup -c",
     "public": "parcel build examples/index.html -d public --no-minify",
     "start": "parcel examples/index.html -d public --open",
-    "test": "npm run public && jest"
+    "test": "npm run build && npm run public && jest"
   },
   "dependencies": {
     "@activewidgets/datagrid": "https://cdn.activewidgets.com/packages/datagrid-0.0.6.tgz",
@@ -24,10 +24,12 @@
     "vue": "^2.0.0"
   },
   "devDependencies": {
-    "@activewidgets/puppeteer": "^0.0.2",
+    "@activewidgets/puppeteer": "^0.0.3",
+    "@activewidgets/testing": "^0.0.1",
     "@babel/core": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "@rollup/plugin-node-resolve": "^6.0.0",
+    "@testing-library/vue": "^4.0.0",
     "parcel": "^1.0.0",
     "postcss-import": "^12.0.0",
     "rollup": "^1.20.0",
@@ -35,11 +37,24 @@
     "rollup-plugin-postcss": "^2.0.0",
     "rollup-plugin-sourcemaps": "^0.4.0",
     "rollup-plugin-terser": "^5.0.0",
-    "style-inject": "^0.3.0"
+    "style-inject": "^0.3.0",
+    "vue-template-compiler": "^2.0.0"
   },
   "jest": {
-    "preset": "@activewidgets/puppeteer",
-    "rootDir": "test"
+    "projects": [
+      {
+        "displayName": "Unit",
+        "preset": "@activewidgets/testing",
+        "moduleNameMapper": {
+          "@activewidgets/components": "<rootDir>/js",
+          "@activewidgets/testing": "<rootDir>/test/adapter/vue.js"
+        }
+      },
+      {
+        "displayName": "Visual",
+        "preset": "@activewidgets/puppeteer"
+      }
+    ]
   },
   "repository": {
     "type": "git",
