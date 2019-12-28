@@ -24,6 +24,7 @@
     "vue": "^2.0.0"
   },
   "devDependencies": {
+    "@activewidgets/options": "0.0.6",
     "@activewidgets/puppeteer": "^0.0.3",
     "@activewidgets/testing": "^0.0.1",
     "@babel/core": "^7.0.0",
