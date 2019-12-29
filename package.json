@@ -2,7 +2,7 @@
   "name": "@activewidgets/vue",
   "version": "0.0.6",
   "description": "Datagrid component for vue.js",
-  "author": "webmaster@activewidgets.com",
+  "author": "ActiveWidgets SARL",
   "license": "MIT",
   "main": "./dist/umd/package.js",
   "module": "./dist/esm/package.js",
@@ -13,33 +13,34 @@
     "README.md"
   ],
   "scripts": {
-    "build": "rollup -c",
-    "public": "parcel build examples/index.html -d public --no-minify",
+    "build": "rimraf dist && rollup -c",
+    "public": "npm run build && rimraf public && parcel build examples/index.html -d public",
     "start": "parcel examples/index.html -d public --open",
-    "test": "npm run build && npm run public && jest"
+    "test": "npm run public && jest"
   },
   "dependencies": {
-    "@activewidgets/datagrid": "https://cdn.activewidgets.com/packages/datagrid-0.0.6.tgz",
-    "@activewidgets/frameworks": "https://cdn.activewidgets.com/packages/frameworks-0.0.6.tgz",
-    "vue": "^2.0.0"
+    "@activewidgets/datagrid": "0.0.8",
+    "@activewidgets/frameworks": "0.0.8",
+    "vue": "^2"
   },
   "devDependencies": {
-    "@activewidgets/options": "0.0.6",
-    "@activewidgets/puppeteer": "^0.0.3",
-    "@activewidgets/testing": "^0.0.1",
-    "@babel/core": "^7.0.0",
-    "@babel/preset-env": "^7.0.0",
-    "@rollup/plugin-node-resolve": "^6.0.0",
-    "@testing-library/vue": "^4.0.0",
-    "parcel": "^1.0.0",
-    "postcss-import": "^12.0.0",
-    "rollup": "^1.20.0",
-    "rollup-plugin-babel": "^4.0.0",
-    "rollup-plugin-postcss": "^2.0.0",
-    "rollup-plugin-sourcemaps": "^0.4.0",
-    "rollup-plugin-terser": "^5.0.0",
-    "style-inject": "^0.3.0",
-    "vue-template-compiler": "^2.0.0"
+    "@activewidgets/options": "0.0.8",
+    "@activewidgets/puppeteer": "0.0.3",
+    "@activewidgets/testing": "0.0.1",
+    "@babel/core": "^7",
+    "@babel/preset-env": "^7",
+    "@rollup/plugin-node-resolve": "^6",
+    "@testing-library/vue": "^4",
+    "parcel": "^1",
+    "postcss-import": "^12",
+    "rimraf": "^3",
+    "rollup": "^1.20",
+    "rollup-plugin-babel": "^4",
+    "rollup-plugin-postcss": "^2",
+    "rollup-plugin-sourcemaps": "^0.4",
+    "rollup-plugin-terser": "^5",
+    "style-inject": "^0.3",
+    "vue-template-compiler": "^2"
   },
   "jest": {
     "projects": [
