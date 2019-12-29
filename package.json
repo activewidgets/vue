@@ -1,6 +1,6 @@
 {
   "name": "@activewidgets/vue",
-  "version": "0.0.6",
+  "version": "0.0.8",
   "description": "Datagrid component for vue.js",
   "author": "ActiveWidgets SARL",
   "license": "MIT",
