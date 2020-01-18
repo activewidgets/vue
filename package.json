@@ -13,8 +13,8 @@
     "README.md"
   ],
   "scripts": {
-    "build": "rimraf dist && rollup -c",
-    "public": "npm run build && rimraf public && parcel build examples/index.html -d public",
+    "build": "rimraf dist/* && rollup -c",
+    "public": "npm run build && rimraf public/* && parcel build examples/index.html -d public",
     "start": "parcel examples/index.html -d public --open",
     "test": "npm run public && jest"
   },
