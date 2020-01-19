@@ -6,12 +6,18 @@ import * as northwind from './northwind.js';
 
 
 let el = document.querySelector('#app>div'),
+    tags = {},
     templates = {},
     data = {northwind},
     lookup = {},
     links = [],
     key = 1,
     obj;
+
+
+Object.keys(components).forEach(name => {
+    tags['ax-' + name.toLowerCase()] = components[name];
+});
 
 
 function path(s){
@@ -40,7 +46,7 @@ function index(name){
 }
 
 
-function render(Component, props){
+function render(component, props){
 
     if (obj) {
         obj.$destroy();
@@ -50,7 +56,7 @@ function render(Component, props){
     el.innerHTML = '';
 
     obj = new Vue({
-      render: h => h(Component, {attrs: props})
+      render: h => h(tags[component], {attrs: props})
     });
 
     obj.$mount(el);
@@ -63,7 +69,7 @@ function refresh(){
         mode = RegExp.$1;
 
     if (name && typeof lookup[name] == 'function') {
-        lookup[name]({render}, components, templates, data);
+        lookup[name]({render}, templates, data);
     }
     else {
         index(name);
