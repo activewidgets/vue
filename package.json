@@ -27,7 +27,7 @@
     "@activewidgets/examples": "0.0.1",
     "@activewidgets/options": "0.0.9",
     "@activewidgets/puppeteer": "0.0.4",
-    "@activewidgets/testing": "0.0.2",
+    "@activewidgets/testing": "0.0.3",
     "@babel/core": "^7",
     "@babel/preset-env": "^7",
     "@rollup/plugin-node-resolve": "^6",

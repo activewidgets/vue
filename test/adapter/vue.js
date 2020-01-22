@@ -1,17 +1,11 @@
 
-import {render as originalRender, fireEvent, wait, waitForElement} from '@testing-library/vue';
-import * as components from '@activewidgets/components';
-
-let tags = {};
-
-Object.keys(components).forEach(name => {
-    tags['ax-' + name.toLowerCase()] = components[name];
-});
+import {render, fireEvent, wait, waitForElement} from '@testing-library/vue';
+import {components} from '@activewidgets/components';
 
 
-export function render(component, props){
+export function mount(component, props){
 
-    if (!tags[component]){
+    if (!components[component]){
         throw new Error('component not found - ' + component);
     }
 
@@ -26,8 +20,8 @@ export function render(component, props){
         }
     }
 
-    return originalRender({
-        render: h => h(tags[component], {attrs, on})
+    return render({
+        render: h => h(components[component], {attrs, on})
     });
 }
 
