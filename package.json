@@ -14,7 +14,7 @@
   ],
   "scripts": {
     "build": "rimraf dist/* && rollup -c",
-    "output": "npm run build && rimraf out/* && parcel build examples/**/*.html -d out",
+    "output": "npm run build && rimraf out/* && parcel build examples/index.html examples/*/*.html -d out",
     "start": "serve-examples",
     "test": "npm run output && jest"
   },
