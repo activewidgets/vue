@@ -14,9 +14,9 @@
   ],
   "scripts": {
     "build": "rimraf dist/* && rollup -c",
-    "public": "npm run build && rimraf public/* && parcel build examples/index.html -d public",
-    "start": "parcel examples/index.html -d public --open",
-    "test": "npm run public && jest"
+    "output": "npm run build && rimraf out/* && parcel build examples/**/*.html -d out",
+    "start": "serve-examples",
+    "test": "npm run output && jest"
   },
   "dependencies": {
     "@activewidgets/datagrid": "0.0.9",
@@ -42,6 +42,9 @@
     "rollup-plugin-terser": "^5",
     "style-inject": "^0.3",
     "vue-template-compiler": "^2"
+  },
+  "alias": {
+    "@activewidgets/vue": "./"
   },
   "jest": {
     "projects": [
