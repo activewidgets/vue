@@ -14,7 +14,7 @@
   ],
   "scripts": {
     "build": "rimraf dist/* && rollup -c",
-    "output": "npm run build && rimraf out/* && parcel build examples/index.html examples/*/*.html -d out",
+    "output": "npm run build && rimraf out/* && build-examples",
     "start": "serve-examples",
     "test": "npm run output && jest"
   },
@@ -24,7 +24,7 @@
     "vue": "^2"
   },
   "devDependencies": {
-    "@activewidgets/examples": "0.0.1",
+    "@activewidgets/examples": "0.0.2",
     "@activewidgets/options": "0.0.10",
     "@activewidgets/puppeteer": "0.0.4",
     "@activewidgets/testing": "0.0.3",
@@ -32,7 +32,6 @@
     "@babel/preset-env": "^7",
     "@rollup/plugin-node-resolve": "^6",
     "@testing-library/vue": "^4",
-    "parcel": "^1",
     "postcss-import": "^12",
     "rimraf": "^3",
     "rollup": "^1.20",

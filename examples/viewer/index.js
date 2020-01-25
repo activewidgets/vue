@@ -1,8 +1,15 @@
 ﻿
 import {Viewer} from '@activewidgets/examples';
-import Vue from "vue";
-import * as pages from '../index.js';
 import {components} from '../../';
+import Vue from "vue";
+import * as pages from './examples.js';
+import readme from '../README.md';
+import logo from './vue.svg';
+import pkg from '../../package.json';
+
+
+let framework = 'Vue',
+    container = document.getElementById('app');
 
 
 Object.keys(components).forEach(name => {
@@ -15,8 +22,7 @@ let obj = null;
 
 function mount(component, props){
 
-    let container = document.getElementById('app'),
-        target = document.createElement('div');
+    let target = document.createElement('div');
 
     container.innerHTML = '';
     container.appendChild(target);
@@ -36,12 +42,14 @@ function clean(){
         obj = null;
     }
 
-    let container = document.getElementById('app');
     container.innerHTML = '';
 }
 
 
+container.innerHTML = '';
+
+
 const viewer = new Viewer({
     target: document.body,
-    props: {pages, mount, clean}
+    props: {framework, pkg, logo, readme, pages, mount, clean}
 });
