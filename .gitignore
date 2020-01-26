@@ -1,7 +1,7 @@
-node_modules
-.cache
-dist
-out
-test/diffs
-*.bat
-package-lock.json
+/node_modules
+/.cache
+/dist
+/out
+/test/diffs
+/*.bat
+/package-lock.json
