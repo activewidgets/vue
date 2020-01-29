@@ -24,7 +24,7 @@
     "vue": "^2"
   },
   "devDependencies": {
-    "@activewidgets/examples": "0.0.2",
+    "@activewidgets/examples": "0.0.3",
     "@activewidgets/options": "0.0.10",
     "@activewidgets/puppeteer": "0.0.4",
     "@activewidgets/testing": "0.0.3",
@@ -32,6 +32,7 @@
     "@babel/preset-env": "^7",
     "@rollup/plugin-node-resolve": "^6",
     "@testing-library/vue": "^4",
+    "@vue/component-compiler-utils": "^3",
     "postcss-import": "^12",
     "rimraf": "^3",
     "rollup": "^1.20",
@@ -40,6 +41,7 @@
     "rollup-plugin-sourcemaps": "^0.4",
     "rollup-plugin-terser": "^5",
     "style-inject": "^0.3",
+    "vue-hot-reload-api": "*",
     "vue-template-compiler": "^2"
   },
   "alias": {

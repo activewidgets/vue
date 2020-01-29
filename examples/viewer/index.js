@@ -1,9 +1,9 @@
 ﻿
 import {Viewer} from '@activewidgets/examples';
-import {components} from '../../';
+import {components} from '@activewidgets/vue';
 import Vue from "vue";
 import * as pages from './examples.js';
-import readme from '../README.md';
+import readme from '../demo/README.md';
 import logo from './vue.svg';
 import pkg from '../../package.json';
 
