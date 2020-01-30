@@ -1,0 +1,19 @@
+{
+  "name": "vue-hello-world",
+  "version": "1.0.0",
+  "description": "Hello World - ActiveWidgets/Vue",
+  "keywords": [],
+  "main": "src/main.js",
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html"
+  },
+  "dependencies": {
+    "@activewidgets/vue": "0.0.10",
+    "vue": "^2"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1"
+  },
+  "private": true
+}
