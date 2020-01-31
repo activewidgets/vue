@@ -8,24 +8,27 @@
   "module": "./dist/esm/package.js",
   "files": [
     "dist/*/*.*",
-    "**/package.json",
+    "*/package.json",
     "LICENSE",
     "README.md"
   ],
   "scripts": {
     "build": "rimraf dist/* && rollup -c",
     "output": "npm run build && rimraf out/* && build-examples",
+    "prepack": "npm run build && rimraf out/*",
     "start": "serve-examples",
     "test": "npm run output && jest"
   },
   "dependencies": {
-    "@activewidgets/datagrid": "0.0.10",
-    "@activewidgets/frameworks": "0.0.10",
+    "@activewidgets/datagrid": "0.0.11",
+    "@activewidgets/frameworks": "0.0.11"
+  },
+  "peerDependencies": {
     "vue": "^2"
   },
   "devDependencies": {
-    "@activewidgets/examples": "0.0.3",
-    "@activewidgets/options": "0.0.10",
+    "@activewidgets/examples": "0.0.5",
+    "@activewidgets/options": "0.0.11",
     "@activewidgets/puppeteer": "0.0.4",
     "@activewidgets/testing": "0.0.3",
     "@babel/core": "^7",
