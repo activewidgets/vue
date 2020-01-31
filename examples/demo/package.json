@@ -9,7 +9,9 @@
     "build": "parcel build index.html"
   },
   "dependencies": {
-    "@activewidgets/vue": "0.0.10",
+    "@activewidgets/examples": "*",
+    "@activewidgets/options": "*",
+    "@activewidgets/vue": "*",
     "vue": "^2"
   },
   "devDependencies": {

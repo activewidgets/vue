@@ -9,7 +9,7 @@
     "build": "parcel build index.html"
   },
   "dependencies": {
-    "@activewidgets/vue": "0.0.10",
+    "@activewidgets/vue": "*",
     "vue": "^2"
   },
   "devDependencies": {
