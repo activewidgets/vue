@@ -44,7 +44,8 @@
     "rollup-plugin-sourcemaps": "^0.4",
     "rollup-plugin-terser": "^5",
     "style-inject": "^0.3",
-    "vue-hot-reload-api": "*",
+    "vue": "^2",
+    "vue-hot-reload-api": "^2",
     "vue-template-compiler": "^2"
   },
   "alias": {
