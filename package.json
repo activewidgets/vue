@@ -13,7 +13,7 @@
     "README.md"
   ],
   "scripts": {
-    "build": "rimraf dist/* && rollup -c",
+    "build": "rimraf dist/* && rollup -c && node rewrite-map.js",
     "output": "npm run build && rimraf out/* && build-examples",
     "prepack": "npm run build && rimraf out/*",
     "start": "serve-examples",

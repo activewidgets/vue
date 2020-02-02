@@ -5,6 +5,7 @@ import postcss from 'rollup-plugin-postcss';
 import sourcemaps from 'rollup-plugin-sourcemaps';
 import fs from 'fs';
 import path from 'path';
+import rootpkg from './package.json';
 
 
 let name = 'ActiveWidgets.Vue',
@@ -72,7 +73,11 @@ let bundles = roots.bundles.map(dir => {
 
     let input = path.join(dir, 'index.js'),
         file = path.join('dist', (dir || 'ax') + '.js'),
-        sourcemapPathTransform = s => s.replace('node_modules', '../..'),
+        sourcemapPathTransform = s => {
+            return s.replace(/^\.\../, '')
+                .replace(/node_modules/, '..')
+                .replace(/@activewidgets.(\w+)/, '$1@' + rootpkg.version);
+         },
         sourcemap = true,
         compact = true;
 
