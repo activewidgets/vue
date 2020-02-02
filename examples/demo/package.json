@@ -2,7 +2,7 @@
   "name": "vue-demo",
   "version": "1.0.0",
   "description": "Demo - ActiveWidgets/Vue",
-  "keywords": [],
+  "license": "MIT",
   "main": "src/main.js",
   "scripts": {
     "start": "parcel index.html --open",

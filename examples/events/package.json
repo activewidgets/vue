@@ -2,7 +2,7 @@
   "name": "vue-events",
   "version": "1.0.0",
   "description": "User events - ActiveWidgets/Vue",
-  "keywords": [],
+  "license": "MIT",
   "main": "src/main.js",
   "scripts": {
     "start": "parcel index.html --open",

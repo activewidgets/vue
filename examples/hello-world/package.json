@@ -2,7 +2,7 @@
   "name": "vue-hello-world",
   "version": "1.0.0",
   "description": "Hello World - ActiveWidgets/Vue",
-  "keywords": [],
+  "license": "MIT",
   "main": "src/main.js",
   "scripts": {
     "start": "parcel index.html --open",
