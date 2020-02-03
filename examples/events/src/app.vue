@@ -1,6 +1,6 @@
 
 <template>
-    <ax-datagrid :columns="columns" :rows="rows" @mouse="onMouse"></ax-datagrid>
+    <ax-datagrid @mouse="onMouse" :columns="columns" :rows="rows"></ax-datagrid>
 </template>
 <script>
 
