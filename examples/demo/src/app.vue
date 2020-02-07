@@ -76,16 +76,16 @@ function onRow(row){
 
 
     // dynamic row style
-    if (data.country == 'France'){
+    if (data.country === 'France'){
         row.class = 'bg-green';
     }
 
     // dynamic cell styles
-    if (data.city == 'London'){
+    if (data.city === 'London'){
         cells.address = {class: 'circle'};
     }
 
-    if (data.contactTitle == 'Owner'){
+    if (data.contactTitle === 'Owner'){
         cells.contact = {class: 'star'};
     }
 }

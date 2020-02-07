@@ -27,7 +27,7 @@
     "vue": "^2"
   },
   "devDependencies": {
-    "@activewidgets/examples": "0.0.5",
+    "@activewidgets/examples": "0.0.6",
     "@activewidgets/options": "3.0.0",
     "@activewidgets/puppeteer": "0.0.4",
     "@activewidgets/testing": "0.0.3",
@@ -36,6 +36,10 @@
     "@rollup/plugin-node-resolve": "^6",
     "@testing-library/vue": "^4",
     "@vue/component-compiler-utils": "^3",
+    "express": "^4",
+    "marked": "^0.8",
+    "opn": "^5",
+    "parcel-bundler": "^1.12",
     "postcss-import": "^12",
     "rimraf": "^3",
     "rollup": "^1.20",
