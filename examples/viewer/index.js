@@ -27,13 +27,24 @@ let obj = null;
 
 function mount(component, props){
 
-    let target = document.createElement('div');
+    let target = document.createElement('div'),
+        attrs = {},
+        on = {};
 
     container.innerHTML = '';
     container.appendChild(target);
 
+    Object.keys(props).forEach(i => {
+        if (i.indexOf('on') === 0){
+            on[i.slice(2).toLowerCase()] = props[i];
+        }
+        else {
+            attrs[i] = props[i];
+        }
+    });
+
     obj = new Vue({
-      render: h => h(component, {attrs: props})
+      render: h => h(component, {attrs, on})
     });
 
     obj.$mount(target);
