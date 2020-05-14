@@ -20,5 +20,5 @@ function onMouse({row}){
 
 Read more:
 
-- [Get started](https://docs.activewidgets.com/guide/starting/vue/#user-events)
+- [Vue Datagrid - Get started](https://docs.activewidgets.com/guide/env/vue/#user-events)
 - [API - mouse event](https://docs.activewidgets.com/api/datagrid/mouse-event/)

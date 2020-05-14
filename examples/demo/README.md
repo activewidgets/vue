@@ -14,6 +14,8 @@ This is a simple demo showing some of the features of ActiveWidgets/Vue datagrid
 - International number/date formats
 - Custom column types (presets)
 
+[Vue Datagrid - Get started](https://docs.activewidgets.com/guide/env/vue/)
+
 ### Virtualized scrolling
 
 The datagrid implements virtualized scrolling - rendering only the visible rows and adding/removing extra rows on the fly 
@@ -140,5 +142,5 @@ like popups, overlays, gantt charts, schedulers etc.
 
 Read more:
 
-- [Get started](https://docs.activewidgets.com/guide/starting/vue/)
+- [Vue Datagrid - Get started](https://docs.activewidgets.com/guide/env/vue/)
 - [API](https://docs.activewidgets.com/api/)
