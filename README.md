@@ -8,7 +8,7 @@
 [![Github issues](https://img.shields.io/github/issues/activewidgets/vue)](https://github.com/activewidgets/vue/issues "See Github issues")
 [![Github repo](https://img.shields.io/github/stars/activewidgets/vue?label=GitHub&style=social)](https://github.com/activewidgets/vue "Open Github repo")
 
-ActiveWidgets is a multi-framework UI component library. This package provides **datagrid component** for **Vue**.
+ActiveWidgets is a multi-framework UI component library. This package provides [virtualized datagrid component for Vue](https://activewidgets.com/vue/data-grid/).
 
 [Live demo](https://vue.activewidgets.com) / [Developer guide](https://docs.activewidgets.com/guide/) / [API reference](https://docs.activewidgets.com/api/)
 

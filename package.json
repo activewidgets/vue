@@ -76,12 +76,20 @@
     "url": "git+https://github.com/activewidgets/vue.git"
   },
   "keywords": [
-    "activewidgets",
+    "vue",
     "datagrid",
-    "vue"
+    "datatable",
+    "virtualized",
+    "scrolling",
+    "grid",
+    "table",
+    "virtual",
+    "data-grid",
+    "data-table",
+    "activewidgets"
   ],
   "bugs": {
     "url": "https://github.com/activewidgets/vue/issues"
   },
-  "homepage": "https://activewidgets.com"
+  "homepage": "https://activewidgets.com/vue/data-grid/"
 }
