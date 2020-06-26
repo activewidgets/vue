@@ -33,4 +33,4 @@ Thats all!
 
 Read more:
 
- - [Vue Datagrid - Get started](https://docs.activewidgets.com/guide/env/vue/)
+ - [Vue Datagrid - Get started](https://activewidgets.com/guide/env/vue/)

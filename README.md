@@ -10,7 +10,7 @@
 
 ActiveWidgets is a multi-framework UI component library. This package provides [virtualized datagrid component for Vue](https://activewidgets.com/vue/data-grid/).
 
-[Live demo](https://vue.activewidgets.com) / [Developer guide](https://docs.activewidgets.com/guide/) / [API reference](https://docs.activewidgets.com/api/)
+[Live demo](https://vue.activewidgets.com) / [Developer guide](https://activewidgets.com/guide/) / [API reference](https://activewidgets.com/api/)
 
 [![Datagrid demo](https://cdn.activewidgets.com/assets/screens/demo.png)](https://vue.activewidgets.com)
 
@@ -22,7 +22,7 @@ ActiveWidgets is a multi-framework UI component library. This package provides [
 
 ## Installation
 
-Add [@activewidgets/vue](https://docs.activewidgets.com/api/packages/vue/) to your project dependencies -
+Add [@activewidgets/vue](https://activewidgets.com/api/packages/vue/) to your project dependencies -
 
 ```sh
 > npm i --save @activewidgets/vue
@@ -75,14 +75,14 @@ var Datagrid = ActiveWidgets.Vue.Datagrid;
 
 ## Data properties
 
-You have to provide [columns](https://docs.activewidgets.com/api/datagrid/columns/) and [rows](https://docs.activewidgets.com/api/datagrid/rows/) properties to the datagrid to show some data. The properties of each `column` object define how the data will be rendered -
+You have to provide [columns](https://activewidgets.com/api/datagrid/columns/) and [rows](https://activewidgets.com/api/datagrid/rows/) properties to the datagrid to show some data. The properties of each `column` object define how the data will be rendered -
 
-- [field](https://docs.activewidgets.com/api/datagrid/columns/#field) - where the cell data comes from (string|function)
-- [header](https://docs.activewidgets.com/api/datagrid/columns/#header) - column header (string|object)
-- [width](https://docs.activewidgets.com/api/datagrid/columns/#width) - column width (number, in pixels)
-- [align](https://docs.activewidgets.com/api/datagrid/columns/#align) - cell text alignment (left|right|center)
-- [format](https://docs.activewidgets.com/api/datagrid/columns/#format) - number/date format (string|function)
-- [fixed](https://docs.activewidgets.com/api/datagrid/columns/#fixed) - fixed (true/false) for columns on the left or right side
+- [field](https://activewidgets.com/api/datagrid/columns/#field) - where the cell data comes from (string|function)
+- [header](https://activewidgets.com/api/datagrid/columns/#header) - column header (string|object)
+- [width](https://activewidgets.com/api/datagrid/columns/#width) - column width (number, in pixels)
+- [align](https://activewidgets.com/api/datagrid/columns/#align) - cell text alignment (left|right|center)
+- [format](https://activewidgets.com/api/datagrid/columns/#format) - number/date format (string|function)
+- [fixed](https://activewidgets.com/api/datagrid/columns/#fixed) - fixed (true/false) for columns on the left or right side
 
 The `style` (string|object) or `className` properties allow to change the styling of the column and cell elements.
 
@@ -114,7 +114,7 @@ function data(){
 ## User events
 
 In addition to the standard DOM keyboard and mouse events the datagrid emits composite 
-[mouse](https://docs.activewidgets.com/api/datagrid/mouse-event/) event which makes it easier to find the elements affected by the user action -
+[mouse](https://activewidgets.com/api/datagrid/mouse-event/) event which makes it easier to find the elements affected by the user action -
 
 ```js
 function onMouse({row}){
@@ -135,8 +135,8 @@ export default { components, data, methods };
 ## More info
 
 - [Live demo](https://react.activewidgets.com) 
-- [Developer guide](https://docs.activewidgets.com/guide/) 
-- [API reference](https://docs.activewidgets.com/api/)
+- [Developer guide](https://activewidgets.com/guide/) 
+- [API reference](https://activewidgets.com/api/)
 - [Licensing](https://activewidgets.com/licenses/)
 - [Support forum](https://activewidgets.com/messages/)
 
