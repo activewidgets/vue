@@ -5,6 +5,6 @@
  */
 
 import adapter from '@activewidgets/frameworks/vue';
-import Vue from 'vue';
+import {h, ref, nextTick, onMounted, onUpdated, onBeforeUnmount, defineComponent} from 'vue';
 
-export const {build, components} = adapter(Vue);
+export const {build, components} = adapter({h, ref, nextTick, onMounted, onUpdated, onBeforeUnmount, defineComponent});

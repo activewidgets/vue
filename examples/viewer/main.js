@@ -6,7 +6,7 @@
 
 import {Viewer} from '@activewidgets/examples';
 import {components} from '@activewidgets/vue';
-import Vue from "vue";
+import {h, createApp} from "vue";
 import * as pages from './examples.js';
 import readme from '../demo/README.md';
 import logo from './vue.svg';
@@ -14,47 +14,26 @@ import pkg from '../../package.json';
 
 
 let framework = 'Vue',
-    container = document.getElementById('app');
+    container = document.getElementById('app'),
+    obj = null;
 
-
-Object.keys(components).forEach(name => {
-    Vue.component(name, components[name]);
-});
-
-
-let obj = null;
-
-
-function mount(component, props){
+function mount(name, props){
 
     let target = document.createElement('div'),
-        attrs = {},
-        on = {};
+        component = components[name];
 
     container.innerHTML = '';
     container.appendChild(target);
 
-    Object.keys(props).forEach(i => {
-        if (i.indexOf('on') === 0){
-            on[i.slice(2).toLowerCase()] = props[i];
-        }
-        else {
-            attrs[i] = props[i];
-        }
-    });
-
-    obj = new Vue({
-      render: h => h(component, {attrs, on})
-    });
-
-    obj.$mount(target);
+    obj = createApp({render: () => h(component, props)});
+    obj.mount(target);
 }
 
 
 function clean(){
 
     if (obj) {
-        obj.$destroy();
+        obj.unmount(container.firstChild);
         obj = null;
     }
 
