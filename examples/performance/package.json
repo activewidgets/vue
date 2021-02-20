@@ -5,16 +5,17 @@
   "license": "MIT",
   "main": "src/main.js",
   "scripts": {
-    "start": "parcel index.html --open",
-    "build": "parcel build index.html"
+    "start": "vite --open /",
+    "build": "vite build"
   },
   "dependencies": {
     "@activewidgets/examples": "*",
-    "@activewidgets/vue": "*",
-    "vue": "^2"
+    "@activewidgets/vue": "^3",
+    "vue": "^3"
   },
   "devDependencies": {
-    "parcel-bundler": "^1"
+    "@vitejs/plugin-vue": "^1",
+    "vite": "^2.0.0-beta.70"
   },
   "private": true
 }
