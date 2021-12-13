@@ -14,7 +14,7 @@
     "vue": "^3"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^1",
+    "@vitejs/plugin-vue": "^2",
     "vite": "^2"
   },
   "private": true
