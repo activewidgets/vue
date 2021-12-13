@@ -1,6 +1,6 @@
 
 <template>
-    <ax-datagrid :columns="columns" :rows="rows" :options="options" @row="onRow">
+    <ax-datagrid :columns="columns" :rows="rows" :options="options">
 
         <template #company="{data}">
             <div>
@@ -65,35 +65,6 @@ function data(){
     return { columns, rows, options, flags };
 }
 
-
-function onRow(row){
-
-    const {data, cells} = row;
-
-    // calculated values
-    cells.amount = 2000 * Math.random();
-    cells.date = Date.now() - 500 * 86400000 * Math.random();
-
-
-    // dynamic row style
-    if (data.country === 'France'){
-        row.class = 'bg-green';
-    }
-
-    // dynamic cell styles
-    if (data.city === 'London'){
-        cells.address = {class: 'circle'};
-    }
-
-    if (data.contactTitle === 'Owner'){
-        cells.contact = {class: 'star'};
-    }
-}
-
-
-const methods = { onRow };
-
-
-export default { components, data, methods };
+export default { components, data };
 
 </script>
