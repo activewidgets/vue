@@ -31,7 +31,6 @@
     "@activewidgets/examples": "0.0.11",
     "@activewidgets/options": "3.0.9",
     "@activewidgets/puppeteer": "0.0.6",
-    "@activewidgets/testing": "0.0.6",
     "@babel/core": "^7",
     "@babel/preset-env": "^7",
     "@rollup/plugin-babel": "^5",
@@ -50,12 +49,7 @@
     "vue": "^3"
   },
   "jest": {
-    "projects": [
-      {
-        "displayName": "Visual",
-        "preset": "@activewidgets/puppeteer"
-      }
-    ]
+   "preset": "@activewidgets/puppeteer"
   },
   "repository": {
     "type": "git",
