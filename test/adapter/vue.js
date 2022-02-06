@@ -9,20 +9,7 @@ export function mount(component, props){
         throw new Error('component not found - ' + component);
     }
 
-    let i, attrs = {}, on = {};
-
-    for (i in props){
-        if (i.slice(0, 2) == 'on'){
-            on[i.slice(2).toLowerCase()] = props[i];
-        }
-        else {
-            attrs[i] = props[i];
-        }
-    }
-
-    return render({
-        render: h => h(components[component], {attrs, on})
-    });
+    return render(components[component], {props});
 }
 
 export {fireEvent, wait, waitForElement};
