@@ -30,10 +30,6 @@ export default [
 
         let className, cells = {};
 
-        // calculated values
-        cells.amount = 2000 * Math.random();
-        cells.date = Date.now() - 500 * 86400000 * Math.random();
-
         // dynamic row style
         if (data.country == 'France'){
             className = 'bg-green';

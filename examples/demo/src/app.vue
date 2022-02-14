@@ -1,6 +1,6 @@
 
 <template>
-    <ax-datagrid :columns="columns" :rows="rows" :options="options">
+    <ax-datagrid :columns="columns" :rows="rows" :calc="calc" :options="options">
 
         <template #company="{data}">
             <div>
@@ -59,10 +59,16 @@ function data(){
         { header: 'Order Date', type: 'date', field: 'date' }
     ];
 
-
     const rows = Object.freeze(northwind.customers);
 
-    return { columns, rows, options, flags };
+    function calc(){
+        return {
+            amount: 2000 * Math.random(),
+            date: Date.now() - 500 * 86400000 * Math.random()
+        };
+    }
+
+    return { columns, rows, calc, options, flags };
 }
 
 export default { components, data };
