@@ -4,7 +4,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import { intl, format, column, type, row } from "@activewidgets/options";
+import { intl, format, column, type, row, cell } from "@activewidgets/options";
 
 
 export default [
@@ -26,24 +26,21 @@ export default [
     type('date', {format: 'date', width: 150, align: 'right'}),
 
     // customize row
-    row(({data}) => {
-
-        let className, cells = {};
-
-        // dynamic row style
+    row(data => {
         if (data.country == 'France'){
-            className = 'bg-green';
+            return {class:'bg-green'};
+        }
+    }),
+
+    // customize cells
+    cell((value, data, column) => {
+
+        if (data.city == 'London' && column.key == 'address'){
+            return {class: 'circle'};
         }
 
-        // dynamic cell styles
-        if (data.city == 'London'){
-            cells.address = {class: 'circle'};
+        if (data.contactTitle == 'Owner' && column.key == 'contact'){
+            return {class: 'star'};
         }
-
-        if (data.contactTitle == 'Owner'){
-            cells.contact = {class: 'star'};
-        }
-
-        return {class: className, cells};
     })
 ];
