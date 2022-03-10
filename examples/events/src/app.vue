@@ -1,6 +1,6 @@
 
 <template>
-    <ax-datagrid @mouse="onMouse" :columns="columns" :rows="rows"></ax-datagrid>
+    <ax-datagrid :columns="columns" :rows="rows" @init="onInit" @click="onClick" ></ax-datagrid>
 </template>
 <script>
 
@@ -14,12 +14,22 @@ function data(){
 }
 
 
-function onMouse({row}){
-    alert(`row ${row.key} clicked!`);
+let gridAPI;
+
+function onInit(api){
+    gridAPI = api;
 }
 
 
-const methods = { onMouse };
+function onClick(event){
+    let cell = gridAPI.cellFromElement(event.target);
+    if (cell && cell.section === 'main') {
+        alert(`row ${cell.row.index + 1} clicked!`);
+    }
+}
+
+
+const methods = { onInit, onClick };
 
 export default { components, data, methods };
 
