@@ -1,5 +1,5 @@
 
-[Open fullscreen](/columns/) | [Source on github](https://github.com/activewidgets/vue/tree/master/examples/columns) | [Edit on Codesandbox](https://codesandbox.io/s/github/activewidgets/vue/tree/master/examples/columns)
+[Open fullscreen](https://vue.activewidgets.com/columns/) | [Source on github](https://github.com/activewidgets/vue/tree/master/examples/columns) | [Edit on stackblitz](https://stackblitz.com/github/activewidgets/vue/tree/master/examples/columns?file=src/app.vue)
 
 This example shows how to configure datagrid columns:
 

@@ -17,5 +17,10 @@
     "@vitejs/plugin-vue": "^2",
     "vite": "^2"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/activewidgets/vue.git",
+    "directory": "examples/columns"
+  },
   "private": true
 }

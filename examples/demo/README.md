@@ -1,5 +1,5 @@
 
-[Open fullscreen](/demo/) | [Source on github](https://github.com/activewidgets/vue/tree/master/examples/demo) | [Edit on Codesandbox](https://codesandbox.io/s/github/activewidgets/vue/tree/master/examples/demo)
+[Open fullscreen](https://vue.activewidgets.com/demo/) | [Source on github](https://github.com/activewidgets/vue/tree/master/examples/demo) | [Edit on stackblitz](https://stackblitz.com/github/activewidgets/vue/tree/master/examples/demo?file=src/app.vue)
 
 This is a simple demo showing some of the features of ActiveWidgets/Vue datagrid -
 

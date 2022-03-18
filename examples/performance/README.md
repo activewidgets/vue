@@ -1,5 +1,5 @@
 
-[Open fullscreen](/performance/) | [Source on github](https://github.com/activewidgets/vue/tree/master/examples/performance) | [Edit on Codesandbox](https://codesandbox.io/s/github/activewidgets/vue/tree/master/examples/performance)
+[Open fullscreen](https://vue.activewidgets.com/performance/) | [Source on github](https://github.com/activewidgets/vue/tree/master/examples/performance) | [Edit on stackblitz](https://stackblitz.com/github/activewidgets/vue/tree/master/examples/performance?file=src/app.vue)
 
 This example shows virtualized scrolling + lazy loading performance (load as you scroll).
 
