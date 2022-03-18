@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@activewidgets/examples": "*",
+    "@activewidgets/options": "^3",
     "@activewidgets/vue": "^3",
     "vue": "^3"
   },
