@@ -28,7 +28,7 @@
     "vue": "^3"
   },
   "devDependencies": {
-    "@activewidgets/examples": "0.0.15",
+    "@activewidgets/examples": "0.0.16",
     "@activewidgets/options": "3.1.2",
     "@activewidgets/puppeteer": "0.0.6",
     "@babel/core": "^7",
