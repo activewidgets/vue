@@ -11,19 +11,19 @@ import './styles.css';
 
 function soda(url){
 
-    function request(url, fn){
-        return fetch(url).then(res => res.json()).then(fn);
+    function request(url){
+        return fetch(url).then(res => res.json());
     }
 
-    let totals = request(url + '?$select=count(*)', data => Number(data[0].count));
+    function getRows({offset = 0, limit = 100}){
+        return request(url + '?$limit=' + limit + '&$offset=' + offset);
+    }
 
-    return function({offset = 0, limit = 100}){
-        return totals.then(count => request(url + '?$limit=' + limit + '&$offset=' + offset, items => ({
-            items,
-            start: offset,
-            max: count
-        })));
-    };
+    function getCount(){
+        return request(url + '?$select=count(*)').then(data => Number(data[0].count));
+    }
+
+    return {getRows, getCount};
 }
 
 
