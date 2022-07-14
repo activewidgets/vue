@@ -1,6 +1,5 @@
 
 import resolve from '@rollup/plugin-node-resolve';
-import babel from '@rollup/plugin-babel';
 import postcss from 'rollup-plugin-postcss';
 import sourcemaps from 'rollup-plugin-sourcemaps';
 import {terser} from 'rollup-plugin-terser';
@@ -52,12 +51,6 @@ let plugins = [
     }),
     sourcemaps(),
     resolve(),
-    babel({
-        babelrc: false,
-        babelHelpers: 'bundled',
-        exclude: 'node_modules/**',
-        presets: [["@babel/env", {targets: {ie: 11}}]]
-    }),
     terser({
         output: {comments: keepBanner}
     })

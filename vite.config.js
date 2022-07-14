@@ -1,25 +1,19 @@
 import {resolve} from 'path';
 import markdown from 'rollup-plugin-md';
 import vue from '@vitejs/plugin-vue';
+import examples from '@activewidgets/examples/plugin';
+import puppeteer from '@activewidgets/puppeteer/plugin';
 
 
 export default {
     root: 'examples',
     build: {
         outDir: '../out',
-        emptyOutDir: true,
-        rollupOptions: {
-            input: {
-                main: resolve('examples/index.html'),
-                columns: resolve('examples/columns/index.html'),
-                demo: resolve('examples/demo/index.html'),
-                events: resolve('examples/events/index.html'),
-                hello: resolve('examples/hello-world/index.html'),
-                performance: resolve('examples/performance/index.html')
-            }    
-        }
+        emptyOutDir: true
     },
     plugins: [
+        puppeteer('../test/visual/*.js'),
+        examples(),
         markdown(),
         vue()
     ],
