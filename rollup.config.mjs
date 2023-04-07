@@ -1,11 +1,11 @@
 
 import resolve from '@rollup/plugin-node-resolve';
 import postcss from 'rollup-plugin-postcss';
-import sourcemaps from 'rollup-plugin-sourcemaps';
-import {terser} from 'rollup-plugin-terser';
+import terser from '@rollup/plugin-terser';
 import fs from 'fs';
 import path from 'path';
-import rootpkg from './package.json';
+
+let rootpkg = JSON.parse(read('./package.json'));
 
 
 let name = 'ActiveWidgets.Vue',
@@ -30,7 +30,7 @@ let roots = {
 
 let getBanner = name => `/**
  * ${name} ${rootpkg.version}
- * Copyright (C) 2022 ActiveWidgets SARL. All Rights Reserved.
+ * Copyright (C) 2023 ActiveWidgets SARL. All Rights Reserved.
  * This code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this package.
  */
@@ -39,7 +39,7 @@ let getBanner = name => `/**
 
 function keepBanner(node, comment){
     if (comment.type == "comment2") {
-        return /\(C\) 2022 ActiveWidgets/.test(comment.value);
+        return /\(C\) 2023 ActiveWidgets/.test(comment.value);
     }
 }
 
@@ -49,7 +49,6 @@ let plugins = [
         extract: 'ax.css',
         sourceMap: true
     }),
-    sourcemaps(),
     resolve(),
     terser({
         output: {comments: keepBanner}
@@ -86,7 +85,7 @@ let modules = roots.modules.map(dir => {
 
 let getCommercial = () => `/**
  * ${rootpkg.name} ${rootpkg.version}
- * Copyright (C) 2022 ActiveWidgets SARL. All Rights Reserved.
+ * Copyright (C) 2023 ActiveWidgets SARL. All Rights Reserved.
  * This code is licensed under the COMMERCIAL license.
  */
 `;
