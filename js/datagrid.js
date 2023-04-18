@@ -4,7 +4,9 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import {build} from './framework.js';
-import * as components from '@activewidgets/datagrid/js';
+import {VueComponent} from './framework.js';
+import {Datagrid as _Datagrid, Row as _Row, Cells as _Cells} from '@activewidgets/datagrid/js';
 
-export const {Datagrid, Row, Gridview, Scrollbars} = build(components);
+export const Datagrid = VueComponent(_Datagrid);
+export const Row = VueComponent(_Row);
+export const Cells = VueComponent(_Cells);
