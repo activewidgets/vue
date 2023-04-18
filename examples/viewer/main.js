@@ -5,7 +5,7 @@
  */
 
 import {Viewer} from '@activewidgets/examples';
-import {components} from '@activewidgets/vue';
+import {Datagrid, Row, Cells} from '@activewidgets/vue';
 import {h, createApp} from "vue";
 import * as pages from './examples.js';
 import readme from '../demo/README.md';
@@ -16,6 +16,13 @@ import pkg from '../../package.json';
 let framework = 'Vue',
     container = document.getElementById('app'),
     obj = null;
+
+let components = {
+    'ax-datagrid': Datagrid,
+    'ax-row': Row,
+    'ax-cells': Cells
+};
+
 
 function mount(name, props){
 

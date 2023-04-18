@@ -1,22 +1,14 @@
 
 <template>
-    <ax-datagrid :rows="rows"></ax-datagrid>
+    <Datagrid :rows="rows"></Datagrid>
 </template>
-<script>
+<script setup>
 
-import {components} from '@activewidgets/vue';
+import { Datagrid } from '@activewidgets/vue';
 import './styles.css';
 
-
-function data(){
-    return {
-        rows: [
-            { message: 'Hello, World!' }
-        ]
-    };
-}
-
-
-export default { components, data };
+const rows = [
+    { message: 'Hello, World!' }
+];
 
 </script>

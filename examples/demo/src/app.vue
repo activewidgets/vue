@@ -1,6 +1,6 @@
 
 <template>
-    <ax-datagrid :columns="columns" :rows="rows" :calc="calc" :options="options">
+    <Datagrid :columns="columns" :rows="rows" :calc="calc" :options="options">
 
         <template #company="{data}">
             <div>
@@ -36,41 +36,33 @@
             </div>
         </template>
 
-    </ax-datagrid>
+    </Datagrid>
 </template>
-<script>
+<script setup>
 
-import {components} from '@activewidgets/vue';
+import { Datagrid } from '@activewidgets/vue';
 import { northwind } from '@activewidgets/examples/data';
 import * as flags from '@activewidgets/examples/flags';
 import options from './options';
 import './styles.css';
 
+const columns = [
+    { header: 'Company', template: 'company', fixed: true },
+    { header: 'Contact', template: 'contact', style: 'background:#f4f4f4', key: 'contact' },
+    { header: 'Address', template: 'address', key: 'address' },
+    { header: 'Country', type: 'country flag', field: 'country' },
+    { header: 'Phone/Fax', type: 'phone & fax'},
+    { header: 'Last Order', type: 'money', field: 'amount' },
+    { header: 'Order Date', type: 'date', field: 'date' }
+];
 
-function data(){
+const rows = Object.freeze(northwind.customers);
 
-    const columns = [
-        { header: 'Company', template: 'company', fixed: true },
-        { header: 'Contact', template: 'contact', style: 'background:#f4f4f4', key: 'contact' },
-        { header: 'Address', template: 'address', key: 'address' },
-        { header: 'Country', type: 'country flag', field: 'country' },
-        { header: 'Phone/Fax', type: 'phone & fax'},
-        { header: 'Last Order', type: 'money', field: 'amount' },
-        { header: 'Order Date', type: 'date', field: 'date' }
-    ];
-
-    const rows = Object.freeze(northwind.customers);
-
-    function calc(){
-        return {
-            amount: 2000 * Math.random(),
-            date: Date.now() - 500 * 86400000 * Math.random()
-        };
-    }
-
-    return { columns, rows, calc, options, flags };
+function calc(){
+    return {
+        amount: 2000 * Math.random(),
+        date: Date.now() - 500 * 86400000 * Math.random()
+    };
 }
-
-export default { components, data };
 
 </script>

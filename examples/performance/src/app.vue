@@ -1,13 +1,12 @@
 
 <template>
-    <ax-datagrid :columns="columns" :rows="rows" :options="options"></ax-datagrid>
+    <Datagrid :columns="columns" :rows="rows" :options="options"></Datagrid>
 </template>
-<script>
+<script setup>
 
-import {components} from '@activewidgets/vue';
+import { Datagrid } from '@activewidgets/vue';
 import { lazy } from '@activewidgets/options';
 import './styles.css';
-
 
 function soda(url){
 
@@ -26,30 +25,21 @@ function soda(url){
     return {getRows, getCount};
 }
 
+let rows = soda('https://data.cityofchicago.org/resource/xzkq-xp2w.json');
 
-function data(){
+let columns = [
+    {header: 'Name', field: 'name', width: 200, position: 'left'},
+    {header: 'Department', field: 'department', width: 150},
+    {header: 'Job titles', field: 'job_titles', width: 200},
+    {header: 'Full or part time', field: 'full_or_part_time', width: 50, style: {textAlign: 'center'}},
+    {header: 'Salary or hourly', field: 'salary_or_hourly', style: {textAlign: 'center'}},
+    {header: 'Hourly rate', field: 'hourly_rate', style: {textAlign: 'right'}},
+    {header: 'Typical hours', field: 'typical_hours', style: {textAlign: 'right'}},
+    {header: 'Annual salary', field: 'annual_salary', type: 'money', style: {textAlign: 'right'}}
+];
 
-    let rows = soda('https://data.cityofchicago.org/resource/xzkq-xp2w.json');
-
-    let columns = [
-        {header: 'Name', field: 'name', width: 200, position: 'left'},
-        {header: 'Department', field: 'department', width: 150},
-        {header: 'Job titles', field: 'job_titles', width: 200},
-        {header: 'Full or part time', field: 'full_or_part_time', width: 50, style: {textAlign: 'center'}},
-        {header: 'Salary or hourly', field: 'salary_or_hourly', style: {textAlign: 'center'}},
-        {header: 'Hourly rate', field: 'hourly_rate', style: {textAlign: 'right'}},
-        {header: 'Typical hours', field: 'typical_hours', style: {textAlign: 'right'}},
-        {header: 'Annual salary', field: 'annual_salary', type: 'money', style: {textAlign: 'right'}}
-    ];
-
-    let options = [
-        lazy()
-    ];
-
-    return { columns, rows, options };
-}
-
-
-export default { components, data };
+let options = [
+    lazy()
+];
 
 </script>

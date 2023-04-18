@@ -7,4 +7,4 @@
 import converter from '@activewidgets/frameworks/vue';
 import {h, ref, nextTick, cloneVNode, provide, inject, onMounted, onUpdated, onBeforeUnmount, onErrorCaptured, withAsyncContext, Suspense, defineComponent} from 'vue';
 
-export const {component: VueComponent, components} = converter({h, ref, nextTick, cloneVNode, provide, inject, onMounted, onUpdated, onBeforeUnmount, onErrorCaptured, withAsyncContext, Suspense, defineComponent});
+export const {component: VueComponent} = converter({h, ref, nextTick, cloneVNode, provide, inject, onMounted, onUpdated, onBeforeUnmount, onErrorCaptured, withAsyncContext, Suspense, defineComponent});
