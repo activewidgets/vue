@@ -4,8 +4,27 @@
   "description": "Datagrid component for vue.js",
   "author": "ActiveWidgets SARL",
   "license": "MIT",
+  "type": "module",
   "main": "./dist/umd/package.js",
   "module": "./dist/esm/package.js",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/package.js",
+      "require": "./dist/umd/package.js"
+    },
+    "./js": {
+      "import": "./dist/esm/js.js",
+      "require": "./dist/umd/js.js"
+    },
+    "./css": {
+      "import": "./dist/esm/css.js",
+      "require": "./dist/umd/css.js"
+    },
+    "./bundle": {
+      "import": "./dist/esm/bundle.js",
+      "require": "./dist/umd/bundle.js"
+    }
+  },
   "files": [
     "dist/*/*.*",
     "*/package.json",

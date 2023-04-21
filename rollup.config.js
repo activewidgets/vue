@@ -17,7 +17,6 @@ let globals = {
     '@activewidgets/frameworks/vue': 'ActiveWidgets.Frameworks.Vue',
     '@activewidgets/datagrid/js': 'ActiveWidgets.Components',
     '@activewidgets/datagrid/style': 'ActiveWidgets.Styles',
-    '@activewidgets/datagrid/dist/datagrid.css': '',
     '@activewidgets/datagrid/css': ''
 };
 
