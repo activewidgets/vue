@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2",
-    "vite": "^2"
+    "vite": "^4"
   },
   "repository": {
     "type": "git",

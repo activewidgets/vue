@@ -1,6 +1,6 @@
 {
   "name": "@activewidgets/vue/js",
-  "main": "../dist/umd/js.js",
+  "main": "../dist/umd/js.cjs",
   "module": "../dist/esm/js.js",
   "private": true
 }

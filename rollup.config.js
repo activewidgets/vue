@@ -17,7 +17,7 @@ let globals = {
     '@activewidgets/frameworks/vue': 'ActiveWidgets.Frameworks.Vue',
     '@activewidgets/datagrid/js': 'ActiveWidgets.Components',
     '@activewidgets/datagrid/style': 'ActiveWidgets.Styles',
-    '@activewidgets/datagrid/css': ''
+    '@activewidgets/datagrid/dist/datagrid.css': ''
 };
 
 
@@ -28,7 +28,7 @@ let roots = {
 
 
 let getBanner = name => `/**
- * ${name} ${rootpkg.version}
+ * ${rootpkg.name + (name && '/' + name)} ${rootpkg.version}
  * Copyright (C) 2023 ActiveWidgets SARL. All Rights Reserved.
  * This code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this package.
@@ -62,19 +62,17 @@ function read(filename){
 
 let modules = roots.modules.map(dir => {
 
-    let pkg = JSON.parse(read(path.join(dir, 'package.json'))),
+    let pkg = rootpkg.exports[dir ? './' + dir : '.'],
         input = path.join(dir, 'index.js'),
-        main = path.join(dir, pkg.main),
-        module = path.join(dir, pkg.module),
         sourcemap = true,
-        banner = getBanner(pkg.name),
+        banner = getBanner(dir),
         compact = true;
 
     return {
         input,
         output: [
-            {file: main, format: 'umd', sourcemap, banner, globals, name, compact},
-            {file: module, format: 'esm', sourcemap, banner},
+            {file: pkg.require, format: 'umd', sourcemap, banner, globals, name, compact},
+            {file: pkg.import, format: 'esm', sourcemap, banner},
         ],
         external: Object.keys(globals),
         plugins

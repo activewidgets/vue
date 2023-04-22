@@ -5,24 +5,23 @@
   "author": "ActiveWidgets SARL",
   "license": "MIT",
   "type": "module",
-  "main": "./dist/umd/package.js",
-  "module": "./dist/esm/package.js",
+  "main": "./dist/esm/package.js",
   "exports": {
     ".": {
       "import": "./dist/esm/package.js",
-      "require": "./dist/umd/package.js"
+      "require": "./dist/umd/package.cjs"
     },
     "./js": {
       "import": "./dist/esm/js.js",
-      "require": "./dist/umd/js.js"
+      "require": "./dist/umd/js.cjs"
     },
     "./css": {
       "import": "./dist/esm/css.js",
-      "require": "./dist/umd/css.js"
+      "require": "./dist/umd/css.cjs"
     },
     "./bundle": {
       "import": "./dist/esm/bundle.js",
-      "require": "./dist/umd/bundle.js"
+      "require": "./dist/umd/bundle.cjs"
     }
   },
   "files": [
