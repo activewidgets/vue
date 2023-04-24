@@ -8,3 +8,7 @@ import converter from '@activewidgets/frameworks/vue';
 import {h, ref, nextTick, cloneVNode, isVNode, provide, inject, onMounted, onUpdated, onBeforeUnmount, onErrorCaptured, withAsyncContext, Suspense, defineComponent} from 'vue';
 
 export const {component: VueComponent} = converter({h, ref, nextTick, cloneVNode, isVNode, provide, inject, onMounted, onUpdated, onBeforeUnmount, onErrorCaptured, withAsyncContext, Suspense, defineComponent});
+
+export function Content({src, params}, {slots}){
+    return src ? src(params) : slots.default && slots.default();
+}
