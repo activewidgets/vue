@@ -5,42 +5,31 @@
   "author": "ActiveWidgets SARL",
   "license": "MIT",
   "type": "module",
-  "main": "./dist/esm/package.js",
+  "main": "./dist/main.js",
+  "sideEffects": false,
   "exports": {
-    ".": {
-      "import": "./dist/esm/package.js",
-      "require": "./dist/umd/package.cjs"
-    },
-    "./js": {
-      "import": "./dist/esm/js.js",
-      "require": "./dist/umd/js.cjs"
-    },
-    "./css": {
-      "import": "./dist/esm/css.js",
-      "require": "./dist/umd/css.cjs"
-    },
-    "./bundle": {
-      "import": "./dist/esm/bundle.js",
-      "require": "./dist/umd/bundle.cjs"
-    }
+    ".": "./dist/main.js",
+    "./index.js": "./dist/index.js",
+    "./index.css": "./dist/index.css",
+    "./style-inject": "./dist/style-inject.js"
   },
   "files": [
-    "dist/*/*.*",
-    "*/package.json",
+    "dist",
     "LICENSE",
     "README.md"
   ],
   "scripts": {
-    "build": "rimraf --glob dist/* && rollup -c",
+    "build": "node build.js",
     "examples": "npm run build && vite build",
-    "prepack": "npm run build && rimraf --glob out/*",
+    "prepack": "npm run build",
     "preview": "npm run examples && vite preview --open /",
     "start": "vite --open /",
     "test": "npm run examples && vitest run"
   },
   "dependencies": {
     "@activewidgets/datagrid": "3.4.4",
-    "@activewidgets/frameworks": "3.4.4"
+    "@activewidgets/frameworks": "3.4.4",
+    "@activewidgets/ui": "*"
   },
   "peerDependencies": {
     "vue": "^3"
@@ -48,21 +37,16 @@
   "devDependencies": {
     "@activewidgets/examples": "0.0.16",
     "@activewidgets/options": "3.4.4",
-    "@activewidgets/puppeteer": "0.1.2",
-    "@rollup/plugin-node-resolve": "^15",
-    "@rollup/plugin-terser": "^0.4",
+    "@activewidgets/puppeteer": "0.1.3",
     "@testing-library/vue": "^7",
     "@vitejs/plugin-vue": "^4",
-    "rimraf": "^4",
-    "rollup": "^3",
     "rollup-plugin-md": "^1",
-    "rollup-plugin-postcss": "^4",
-    "style-inject": "^0.3",
     "vite": "^4",
+    "vitest": "latest",
     "vue": "^3"
   },
   "overrides": {
-    "jest": "npm:style-inject"
+    "jest": "npm:vitest"
   },
   "repository": {
     "type": "git",
